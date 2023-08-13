@@ -1,0 +1,85 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    --fondo-wii:linear-gradient(20deg,rgb(197, 241, 214),rgb(230, 213, 189));
+}
+.main-conteiner{
+    width: 100%;
+    height: 100vh;
+    background-image: var(--fondo-wii);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-conteiner{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius:50% ;
+    border:solid 20px #c7ffec;
+    transition: all 2s ;
+    transform-origin: 50% 50%;
+    animation-name: wii;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+.card-image{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transition: all 2;
+}
+
+@keyframes wii{
+    0%{ borde: solid 10px rgb(145, 157, 224);
+    }
+    50%{
+        border: solid 10px rgb(158, 202, 141);
+    }
+    75%{
+        border: solid 10px rgb(250, 207, 151);
+    }
+    100%{
+        border: solid 10px rgb(243, 171, 231);
+        transform: rotate(180deg);
+    }
+}
+.Texto{
+
+    justify-content:right;
+}
+.container{
+    color:rgb(36, 107, 86);
+}
+.main-menu{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 0px 1em 0px 1em;
+}
+.logo{
+    width: 10rem;
+    height: auto;
+}
+.menu-items{
+    display:flex;
+}
+@media screen  and (min-width:100px){
+    .menu-items{
+        display: flex;
+    }
+    .menu-items li{
+        list-style:none ;
+        margin-left: 1rem;
+    }
+    .menu-items li a{
+        text-decoration: none;
+        color:aliceblue;
+    }
+}
+
